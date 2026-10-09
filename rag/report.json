@@ -1,0 +1,294 @@
+{
+  "indexedAt": "2026-10-09T13:18:04.662Z",
+  "sources": [
+    {
+      "id": "linear-equations",
+      "url": "https://openstax.org/books/college-algebra-2e/pages/2-2-linear-equations-in-one-variable",
+      "title": "2.2 Linear Equations in One Variable",
+      "characters": 14551,
+      "chunks": 15,
+      "sha256": "40fd32622673bddb5ec4ff0339853fa11ee850a3ccaf7b757de3db9daf183ea8"
+    },
+    {
+      "id": "quadratics",
+      "url": "https://openstax.org/books/precalculus-2e/pages/3-2-quadratic-functions",
+      "title": "3.2 Quadratic Functions",
+      "characters": 12690,
+      "chunks": 14,
+      "sha256": "0ee1756b804783c1038781ead0a716ad00c22331ba66a51cb12ff254dcb885d5"
+    },
+    {
+      "id": "complex-numbers",
+      "url": "https://openstax.org/books/college-algebra-2e/pages/2-4-complex-numbers",
+      "title": "2.4 Complex Numbers",
+      "characters": 11262,
+      "chunks": 12,
+      "sha256": "0ac4715a4416774f79df4e2602d401d224f28be6eb9517dd899f87411832b765"
+    },
+    {
+      "id": "logarithms",
+      "url": "https://openstax.org/books/precalculus-2e/pages/4-3-logarithmic-functions",
+      "title": "4.3 Logarithmic Functions",
+      "characters": 10940,
+      "chunks": 12,
+      "sha256": "134d5aa00fcdc83bacc6c93c43a73f096b2b9b6118cb6e05ce059fbcf873ebef"
+    },
+    {
+      "id": "trigonometry",
+      "url": "https://openstax.org/books/precalculus-2e/pages/5-2-unit-circle-sine-and-cosine-functions",
+      "title": "5.2 Unit Circle: Sine and Cosine Functions",
+      "characters": 20111,
+      "chunks": 21,
+      "sha256": "61e71f433ef66be4bed1f34307d596586b76515327b6f258b71ad875ac18f1be"
+    },
+    {
+      "id": "limits",
+      "url": "https://openstax.org/books/calculus-volume-1/pages/2-2-the-limit-of-a-function",
+      "title": "2.2 The Limit of a Function",
+      "characters": 17875,
+      "chunks": 18,
+      "sha256": "ef775a587b60958b553fb3a7c17f87e0b6da519a0c21b8327110138222d16ff4"
+    },
+    {
+      "id": "continuity",
+      "url": "https://openstax.org/books/calculus-volume-1/pages/2-4-continuity",
+      "title": "2.4 Continuity",
+      "characters": 13406,
+      "chunks": 14,
+      "sha256": "73d7ec2e323cce830a03047bb3cc30f3375df9bb4098f8c7dbd4a33aa3a01a0c"
+    },
+    {
+      "id": "derivative-definition",
+      "url": "https://openstax.org/books/calculus-volume-1/pages/3-1-defining-the-derivative",
+      "title": "3.1 Defining the Derivative",
+      "characters": 10066,
+      "chunks": 11,
+      "sha256": "f51a4f2690d7a37e482f71540dae36967c4f90d1ec9679a3163de900e6ce39b3"
+    },
+    {
+      "id": "derivative-rules",
+      "url": "https://openstax.org/books/calculus-volume-1/pages/3-3-differentiation-rules",
+      "title": "3.3 Differentiation Rules",
+      "characters": 16317,
+      "chunks": 17,
+      "sha256": "86fb0b9b3043f6bf8945da949bbb2d9e9f4b28778c909e67fe4aae1ace699541"
+    },
+    {
+      "id": "chain-rule",
+      "url": "https://openstax.org/books/calculus-volume-1/pages/3-6-the-chain-rule",
+      "title": "3.6 The Chain Rule",
+      "characters": 12254,
+      "chunks": 13,
+      "sha256": "e4e155974b49cb337762c71cd39fa5c71032c9b6fc53d1aee59533e9c6faf9fb"
+    },
+    {
+      "id": "integrals",
+      "url": "https://openstax.org/books/calculus-volume-1/pages/5-2-the-definite-integral",
+      "title": "5.2 The Definite Integral",
+      "characters": 17294,
+      "chunks": 18,
+      "sha256": "a76166471783dae4ba598e23fb7bc6c9e8500329a16d8b7287104ef0edf9acd7"
+    },
+    {
+      "id": "fundamental-theorem",
+      "url": "https://openstax.org/books/calculus-volume-1/pages/5-3-the-fundamental-theorem-of-calculus",
+      "title": "5.3 The Fundamental Theorem of Calculus",
+      "characters": 13619,
+      "chunks": 13,
+      "sha256": "f94d93c21a5bf5d3cebb1a173083d791f6342a2abec367d29e04f1e1d9a3b8a4"
+    },
+    {
+      "id": "integration-substitution",
+      "url": "https://openstax.org/books/calculus-volume-1/pages/5-5-substitution",
+      "title": "5.5 Substitution",
+      "characters": 6706,
+      "chunks": 7,
+      "sha256": "306d62e973b2046eb11cbc1bc0a6ce3be3a9acf6704202d2f6664fef377019a2"
+    },
+    {
+      "id": "vectors",
+      "url": "https://openstax.org/books/calculus-volume-3/pages/2-1-vectors-in-the-plane",
+      "title": "2.1 Vectors in the Plane",
+      "characters": 19003,
+      "chunks": 21,
+      "sha256": "056215caaa8cb245f48d688d24f4a0c6666bd99f0740007a212ec65b622f74f8"
+    },
+    {
+      "id": "dot-product",
+      "url": "https://openstax.org/books/calculus-volume-3/pages/2-3-the-dot-product",
+      "title": "2.3 The Dot Product",
+      "characters": 20349,
+      "chunks": 22,
+      "sha256": "31f9114ef32ded0da698acb22f34be5f7b823bb19e3e72998f482ebebe30bd8a"
+    },
+    {
+      "id": "partial-derivatives",
+      "url": "https://openstax.org/books/calculus-volume-3/pages/4-3-partial-derivatives",
+      "title": "4.3 Partial Derivatives",
+      "characters": 20999,
+      "chunks": 21,
+      "sha256": "455c350ee69e85154628e9167a163b69c44057eb3639c4c842bf3aa2fd9194bf"
+    },
+    {
+      "id": "gradient",
+      "url": "https://openstax.org/books/calculus-volume-3/pages/4-6-directional-derivatives-and-the-gradient",
+      "title": "4.6 Directional Derivatives and the Gradient",
+      "characters": 15312,
+      "chunks": 16,
+      "sha256": "417b78c7d4a21761256cb456958b1d328c879cdf92cd85456824e264d33754f8"
+    },
+    {
+      "id": "matrices",
+      "url": "https://openstax.org/books/college-algebra-2e/pages/7-5-matrices-and-matrix-operations",
+      "title": "7.5 Matrices and Matrix Operations",
+      "characters": 14165,
+      "chunks": 14,
+      "sha256": "338180b071c163468430ea6b56837f4fb4e9a4fdcc2e18b46c22a76ed7672162"
+    },
+    {
+      "id": "probability",
+      "url": "https://openstax.org/books/introductory-statistics-2e/pages/3-1-terminology",
+      "title": "3.1 Terminology",
+      "characters": 7376,
+      "chunks": 9,
+      "sha256": "bcfb6a9291e9c0636f4bca493efe7bacc28196153296d5316c5fa939e5e52ddb"
+    },
+    {
+      "id": "conditional-probability",
+      "url": "https://openstax.org/books/introductory-statistics-2e/pages/3-2-independent-and-mutually-exclusive-events",
+      "title": "3.2 Independent and Mutually Exclusive Events",
+      "characters": 2356,
+      "chunks": 3,
+      "sha256": "ca19402f7566eade898b4581d5d999c0951f7636af13fd30feea898396d5de7e"
+    },
+    {
+      "id": "normal-distribution",
+      "url": "https://openstax.org/books/introductory-statistics-2e/pages/6-1-the-standard-normal-distribution",
+      "title": "6.1 The Standard Normal Distribution",
+      "characters": 2100,
+      "chunks": 2,
+      "sha256": "1aeda4f3146cfcea5c5b8b12c2fd0d3f8119581dd74c5c51f6a4ad5fc46d50d2"
+    },
+    {
+      "id": "sequences",
+      "url": "https://openstax.org/books/calculus-volume-2/pages/5-1-sequences",
+      "title": "5.1 Sequences",
+      "characters": 29141,
+      "chunks": 29,
+      "sha256": "94730de41dc04936f63c357103c93b32639c51e5c5299d868c08bcc3bfb72704"
+    },
+    {
+      "id": "infinite-series",
+      "url": "https://openstax.org/books/calculus-volume-2/pages/5-2-infinite-series",
+      "title": "5.2 Infinite Series",
+      "characters": 19943,
+      "chunks": 20,
+      "sha256": "ea4a1bcfba349b3ec8525f8899a6890847dcbca47f41da01c2470653dba9957a"
+    },
+    {
+      "id": "power-series",
+      "url": "https://openstax.org/books/calculus-volume-2/pages/6-1-power-series-and-functions",
+      "title": "6.1 Power Series and Functions",
+      "characters": 10653,
+      "chunks": 11,
+      "sha256": "7d677ab85d5095a77cb2df23383fc564b7da320f93cf2669288e312d14406de4"
+    },
+    {
+      "id": "separable-equations",
+      "url": "https://openstax.org/books/calculus-volume-2/pages/4-3-separable-equations",
+      "title": "4.3 Separable Equations",
+      "characters": 4477,
+      "chunks": 5,
+      "sha256": "51aa8ee8921bdac105d582a78c588aee78dc6b86209acb1923f5d15377ad99b8"
+    },
+    {
+      "id": "first-order-equations",
+      "url": "https://openstax.org/books/calculus-volume-2/pages/4-5-first-order-linear-equations",
+      "title": "4.5 First-Order Linear Equations",
+      "characters": 12035,
+      "chunks": 12,
+      "sha256": "0a10c212a4c564faf389b6cb93a9d0516bf8db36f406d5dc006af8e473309073"
+    },
+    {
+      "id": "binomial-theorem",
+      "url": "https://openstax.org/books/precalculus-2e/pages/11-6-binomial-theorem",
+      "title": "11.6 Binomial Theorem",
+      "characters": 8012,
+      "chunks": 8,
+      "sha256": "29b0cfdc655455d097d74ca7a02ef22d5a8f341e007e51a5ecda4bb6dc7d100c"
+    },
+    {
+      "id": "ellipse",
+      "url": "https://openstax.org/books/precalculus-2e/pages/10-1-the-ellipse",
+      "title": "10.1 The Ellipse",
+      "characters": 19615,
+      "chunks": 21,
+      "sha256": "2b22a09bfe53d90d9037132774888b063a11863c660653a6c9ae43c0ae7af0b7"
+    },
+    {
+      "id": "linear-systems",
+      "url": "https://openstax.org/books/college-algebra-2e/pages/7-6-solving-systems-with-gaussian-elimination",
+      "title": "7.6 Solving Systems with Gaussian Elimination",
+      "characters": 8531,
+      "chunks": 9,
+      "sha256": "ba17ab99651743def83b877aa6828bcd0437e1725e024c10122c55f59aa1514f"
+    },
+    {
+      "id": "determinants",
+      "url": "https://openstax.org/books/college-algebra-2e/pages/7-8-solving-systems-with-cramers-rule",
+      "title": "7.8 Solving Systems with Cramer's Rule",
+      "characters": 11669,
+      "chunks": 12,
+      "sha256": "84698d40cb1b8b83d24d79fe43b6fc09896126312e69cb04e9eca9c513c45fd5"
+    },
+    {
+      "id": "double-integrals",
+      "url": "https://openstax.org/books/calculus-volume-3/pages/5-1-double-integrals-over-rectangular-regions",
+      "title": "5.1 Double Integrals over Rectangular Regions",
+      "characters": 14091,
+      "chunks": 14,
+      "sha256": "957b06cc7e0ae68387eb65285466284bfc6b7972cb2eaeb5a10492eea4b5c756"
+    },
+    {
+      "id": "sets",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts",
+      "title": "1.1 Basic Set Concepts",
+      "characters": 16163,
+      "chunks": 17,
+      "sha256": "938f6632cfcc86acaea6d8e37fcef5a88fe105209a944d26269fa0871092c75b"
+    },
+    {
+      "id": "logic",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/2-3-constructing-truth-tables",
+      "title": "2.3 Constructing Truth Tables",
+      "characters": 10755,
+      "chunks": 12,
+      "sha256": "09b6276b2feeec1ddba639364e63b45147fd2eb65ccb669c43a1fc4d0324c778"
+    },
+    {
+      "id": "geometry",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/10-1-points-lines-and-planes",
+      "title": "10.1 Points, Lines, and Planes",
+      "characters": 12142,
+      "chunks": 13,
+      "sha256": "f0f7705b8ceaeec403ac47077c445962e4e68c60e8815aa090a5f156c70bd7ce"
+    },
+    {
+      "id": "graph-theory",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/12-1-graph-basics",
+      "title": "12.1 Graph Basics",
+      "characters": 13986,
+      "chunks": 15,
+      "sha256": "0b9986a59417f8346a8e54821b2ce5a852737f7f9f1452eab94970cf31e3ae07"
+    },
+    {
+      "id": "graph-structures",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/12-2-graph-structures",
+      "title": "12.2 Graph Structures",
+      "characters": 25077,
+      "chunks": 27,
+      "sha256": "dce7da62a2af7606b0062efa896a7fa468d81bd8bb28dd238ffd21a4783e2bb8"
+    }
+  ],
+  "totalChunks": 518
+}

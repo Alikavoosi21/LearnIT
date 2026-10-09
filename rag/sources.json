@@ -1,0 +1,223 @@
+{
+  "license": "CC BY-NC-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "publisher": "OpenStax, Rice University",
+  "sources": [
+    {
+      "id": "linear-equations",
+      "book": "College Algebra 2e",
+      "path": "college-algebra-2e/pages/2-2-linear-equations-in-one-variable",
+      "keywords": "معادله خطی مجهول جبر linear equation algebra"
+    },
+    {
+      "id": "quadratics",
+      "book": "Precalculus 2e",
+      "path": "precalculus-2e/pages/3-2-quadratic-functions",
+      "keywords": "معادله درجه دوم سهمی ریشه دلتا quadratic parabola roots discriminant"
+    },
+    {
+      "id": "complex-numbers",
+      "book": "College Algebra 2e",
+      "path": "college-algebra-2e/pages/2-4-complex-numbers",
+      "keywords": "اعداد مختلط موهومی حقیقی مزدوج complex imaginary conjugate"
+    },
+    {
+      "id": "logarithms",
+      "book": "Precalculus 2e",
+      "path": "precalculus-2e/pages/4-3-logarithmic-functions",
+      "keywords": "لگاریتم تابع نمایی logarithm exponential"
+    },
+    {
+      "id": "trigonometry",
+      "book": "Precalculus 2e",
+      "path": "precalculus-2e/pages/5-2-unit-circle-sine-and-cosine-functions",
+      "keywords": "مثلثات سینوس کسینوس دایره واحد trigonometry sine cosine"
+    },
+    {
+      "id": "limits",
+      "book": "Calculus Volume 1",
+      "path": "calculus-volume-1/pages/2-2-the-limit-of-a-function",
+      "keywords": "حد تابع یک طرفه پیوستگی limit continuity"
+    },
+    {
+      "id": "continuity",
+      "book": "Calculus Volume 1",
+      "path": "calculus-volume-1/pages/2-4-continuity",
+      "keywords": "پیوستگی ناپیوسته continuity discontinuity"
+    },
+    {
+      "id": "derivative-definition",
+      "book": "Calculus Volume 1",
+      "path": "calculus-volume-1/pages/3-1-defining-the-derivative",
+      "keywords": "مشتق مماس شیب نرخ تغییر derivative tangent slope rate change"
+    },
+    {
+      "id": "derivative-rules",
+      "book": "Calculus Volume 1",
+      "path": "calculus-volume-1/pages/3-3-differentiation-rules",
+      "keywords": "مشتق قاعده توان ضرب تقسیم differentiation power product quotient"
+    },
+    {
+      "id": "chain-rule",
+      "book": "Calculus Volume 1",
+      "path": "calculus-volume-1/pages/3-6-the-chain-rule",
+      "keywords": "مشتق قاعده زنجیره ترکیب chain rule composition"
+    },
+    {
+      "id": "integrals",
+      "book": "Calculus Volume 1",
+      "path": "calculus-volume-1/pages/5-2-the-definite-integral",
+      "keywords": "انتگرال معین مساحت ریمان integral area riemann"
+    },
+    {
+      "id": "fundamental-theorem",
+      "book": "Calculus Volume 1",
+      "path": "calculus-volume-1/pages/5-3-the-fundamental-theorem-of-calculus",
+      "keywords": "قضیه اساسی حساب انتگرال مشتق fundamental theorem calculus"
+    },
+    {
+      "id": "integration-substitution",
+      "book": "Calculus Volume 1",
+      "path": "calculus-volume-1/pages/5-5-substitution",
+      "keywords": "انتگرال تغییر متغیر جایگذاری substitution integration"
+    },
+    {
+      "id": "vectors",
+      "book": "Calculus Volume 3",
+      "path": "calculus-volume-3/pages/2-1-vectors-in-the-plane",
+      "keywords": "بردار مؤلفه جمع طول جهت vector component addition magnitude direction"
+    },
+    {
+      "id": "dot-product",
+      "book": "Calculus Volume 3",
+      "path": "calculus-volume-3/pages/2-3-the-dot-product",
+      "keywords": "ضرب داخلی بردار زاویه عمود dot product orthogonal angle"
+    },
+    {
+      "id": "partial-derivatives",
+      "book": "Calculus Volume 3",
+      "path": "calculus-volume-3/pages/4-3-partial-derivatives",
+      "keywords": "مشتق جزئی چند متغیره partial derivative multivariable"
+    },
+    {
+      "id": "gradient",
+      "book": "Calculus Volume 3",
+      "path": "calculus-volume-3/pages/4-6-directional-derivatives-and-the-gradient",
+      "keywords": "گرادیان مشتق جهت دار gradient directional derivative"
+    },
+    {
+      "id": "matrices",
+      "book": "College Algebra 2e",
+      "path": "college-algebra-2e/pages/7-5-matrices-and-matrix-operations",
+      "keywords": "ماتریس ضرب جمع سطر ستون matrix matrices multiplication row column"
+    },
+    {
+      "id": "probability",
+      "book": "Introductory Statistics 2e",
+      "path": "introductory-statistics-2e/pages/3-1-terminology",
+      "keywords": "احتمال فضای نمونه پیشامد probability event sample space"
+    },
+    {
+      "id": "conditional-probability",
+      "book": "Introductory Statistics 2e",
+      "path": "introductory-statistics-2e/pages/3-2-independent-and-mutually-exclusive-events",
+      "keywords": "احتمال شرطی استقلال conditional probability independent mutually exclusive"
+    },
+    {
+      "id": "normal-distribution",
+      "book": "Introductory Statistics 2e",
+      "path": "introductory-statistics-2e/pages/6-1-the-standard-normal-distribution",
+      "keywords": "توزیع نرمال گاوسی میانگین انحراف معیار normal distribution gaussian mean standard deviation"
+    },
+    {
+      "id": "sequences",
+      "book": "Calculus Volume 2",
+      "path": "calculus-volume-2/pages/5-1-sequences",
+      "keywords": "دنباله همگرایی واگرایی sequence convergence divergence"
+    },
+    {
+      "id": "infinite-series",
+      "book": "Calculus Volume 2",
+      "path": "calculus-volume-2/pages/5-2-infinite-series",
+      "keywords": "سری نامتناهی هندسی infinite series geometric convergence"
+    },
+    {
+      "id": "power-series",
+      "book": "Calculus Volume 2",
+      "path": "calculus-volume-2/pages/6-1-power-series-and-functions",
+      "keywords": "سری توانی شعاع بازه همگرایی power series radius convergence"
+    },
+    {
+      "id": "separable-equations",
+      "book": "Calculus Volume 2",
+      "path": "calculus-volume-2/pages/4-3-separable-equations",
+      "keywords": "معادله دیفرانسیل تفکیک پذیر جداسازی متغیر differential equation separable"
+    },
+    {
+      "id": "first-order-equations",
+      "book": "Calculus Volume 2",
+      "path": "calculus-volume-2/pages/4-5-first-order-linear-equations",
+      "keywords": "معادله دیفرانسیل خطی مرتبه اول عامل انتگرال first order differential integrating factor"
+    },
+    {
+      "id": "binomial-theorem",
+      "book": "Precalculus 2e",
+      "path": "precalculus-2e/pages/11-6-binomial-theorem",
+      "keywords": "بسط دوجمله ای نیوتن ترکیب فاکتوریل binomial theorem combination factorial"
+    },
+    {
+      "id": "ellipse",
+      "book": "Precalculus 2e",
+      "path": "precalculus-2e/pages/10-1-the-ellipse",
+      "keywords": "بیضی هندسه مقاطع مخروطی کانون ellipse geometry conic focus"
+    },
+    {
+      "id": "linear-systems",
+      "book": "College Algebra 2e",
+      "path": "college-algebra-2e/pages/7-6-solving-systems-with-gaussian-elimination",
+      "keywords": "دستگاه معادلات حذف گاوس سطر پلکانی gaussian elimination linear system"
+    },
+    {
+      "id": "determinants",
+      "book": "College Algebra 2e",
+      "path": "college-algebra-2e/pages/7-8-solving-systems-with-cramers-rule",
+      "keywords": "دترمینان کرامر وارون ماتریس determinant cramer inverse matrix"
+    },
+    {
+      "id": "double-integrals",
+      "book": "Calculus Volume 3",
+      "path": "calculus-volume-3/pages/5-1-double-integrals-over-rectangular-regions",
+      "keywords": "انتگرال دوگانه چندگانه فوبینی حجم double multiple integral fubini volume"
+    },
+    {
+      "id": "sets",
+      "book": "Contemporary Mathematics",
+      "path": "contemporary-mathematics/pages/1-1-basic-set-concepts",
+      "keywords": "مجموعه عضو زیرمجموعه تهی set subset empty membership"
+    },
+    {
+      "id": "logic",
+      "book": "Contemporary Mathematics",
+      "path": "contemporary-mathematics/pages/2-3-constructing-truth-tables",
+      "keywords": "منطق گزاره جدول ارزش درستی صدق truth table logic statement"
+    },
+    {
+      "id": "geometry",
+      "book": "Contemporary Mathematics",
+      "path": "contemporary-mathematics/pages/10-1-points-lines-and-planes",
+      "keywords": "هندسه اقلیدسی نقطه خط صفحه موازی geometry point line plane parallel"
+    },
+    {
+      "id": "graph-theory",
+      "book": "Contemporary Mathematics",
+      "path": "contemporary-mathematics/pages/12-1-graph-basics",
+      "keywords": "نظریه گراف رأس راس یال درجه graph vertex edge degree"
+    },
+    {
+      "id": "graph-structures",
+      "book": "Contemporary Mathematics",
+      "path": "contemporary-mathematics/pages/12-2-graph-structures",
+      "keywords": "گراف کامل مسیر دور چرخه همبند graph cycle path connected complete"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "learnit-math-tutor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 3100",
+    "dev:proxy": "node --use-env-proxy node_modules/next/dist/bin/next dev -p 3100",
+    "build": "next build",
+    "start": "next start -p 3100",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "cli": "tsx --env-file-if-exists=.env.local cli.ts",
+    "test:e2e": "playwright test",
+    "rag:index": "tsx scripts/index-rag.ts",
+    "rag:index:proxy": "node --use-env-proxy --import tsx scripts/index-rag.ts"
+  },
+  "dependencies": {
+    "@langchain/core": "latest",
+    "@langchain/langgraph": "latest",
+    "@langchain/textsplitters": "^1.0.2",
+    "cheerio": "^1.2.0",
+    "class-variance-authority": "latest",
+    "clsx": "latest",
+    "cn": "^0.4.0",
+    "katex": "latest",
+    "lucide-react": "latest",
+    "mathlive": "^0.111.1",
+    "next": "latest",
+    "openai": "latest",
+    "radix-ui": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-markdown": "latest",
+    "rehype-katex": "latest",
+    "remark-math": "latest",
+    "sharp": "^0.35.5",
+    "tailwind-merge": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@playwright/test": "latest",
+    "@tailwindcss/postcss": "latest",
+    "@types/katex": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "tailwindcss": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vitest": "latest"
+  }
+}
