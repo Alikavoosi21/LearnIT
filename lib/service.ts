@@ -9,12 +9,12 @@ const runs=globalStore.miloRuns??=new Map<string,Run>();
 const ttl=60*60*1000;
 export class ServiceError extends Error { constructor(message:string,public status:number){super(message);} }
 function publicResult(id:string,state:AgentState) {
-  return {runId:id,question:state.question,imageQuestion:state.imageQuestion,level:state.level,status:state.status,answer:state.answer,visual:state.visual,references:state.references,retrievalStatus:state.retrievalStatus,pending:state.pending,verification:state.verification,verificationNote:state.verificationNote,attempts:state.attempts,trace:state.trace,usage:{modelCalls:state.modelCalls,inputTokens:state.inputTokens,outputTokens:state.outputTokens},mode:process.env.TUTOR_MODE==='openai'?'openai':'local'};
+  return {runId:id,question:state.question,imageQuestion:state.imageQuestion,level:state.level,status:state.status,answer:state.answer,visual:state.visual,uiSchemaVersion:1 as const,uiScene:state.uiScene,uiNote:state.uiNote,references:state.references,retrievalStatus:state.retrievalStatus,pending:state.pending,verification:state.verification,verificationNote:state.verificationNote,attempts:state.attempts,trace:state.trace,usage:{modelCalls:state.modelCalls,inputTokens:state.inputTokens,outputTokens:state.outputTokens},mode:process.env.TUTOR_MODE==='openai'?'openai':'local'};
 }
 export type TutorResult=ReturnType<typeof publicResult>;
-export async function handleTutor(owner:string,request:TutorRequest) {
+export async function handleTutor(owner:string,request:TutorRequest,onProgress?:(node:string)=>void,signal?:AbortSignal) {
   for(const [id,run] of runs) if(Date.now()-run.updated>ttl&&!run.busy) runs.delete(id);
-  const tutor=createTutor(configuredModel());
+  const tutor=createTutor(configuredModel(),signal);
   if(request.action==='start') {
     if(request.image) {
       try {await validateImage(request.image);}catch(error){throw new ServiceError(error instanceof Error?error.message:'عکس معتبر نیست.',400);}
@@ -24,7 +24,7 @@ export async function handleTutor(owner:string,request:TutorRequest) {
     const id=randomUUID();
     const initial={owner,state:null as unknown as AgentState,updated:Date.now(),events:new Map<string,AgentState>(),busy:true};
     runs.set(id,initial);
-    try { initial.state=await tutor.start(request.question,request.level,request.image);initial.busy=false;initial.updated=Date.now();return publicResult(id,initial.state); }
+    try { initial.state=await tutor.start(request.question,request.level,request.image,onProgress,request.useSources??false,request.history??[]);initial.busy=false;initial.updated=Date.now();return publicResult(id,initial.state); }
     catch(error) {runs.delete(id);throw error;}
   }
   const run=runs.get(request.runId);
@@ -34,7 +34,7 @@ export async function handleTutor(owner:string,request:TutorRequest) {
   if(run.busy) throw new ServiceError('درخواست قبلی این سؤال هنوز در حال اجراست.',409);
   run.busy=true;
   try {
-    const next=await tutor.resume(run.state,request.event,request.text);
+    const next=await tutor.resume(run.state,request.event,request.text,onProgress);
     run.state=next;run.updated=Date.now();run.events.set(request.eventId,next);
     return publicResult(request.runId,next);
   } finally {run.busy=false;}

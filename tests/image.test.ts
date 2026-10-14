@@ -26,14 +26,14 @@ it('reads an image once, routes its question and removes image bytes from retain
   const calls:{name:string;imageUrl?:string}[]=[];
   const model:ModelAdapter={async generate(schema,name,_instructions,_data,imageUrl){
     calls.push({name,imageUrl});
-    const payload=name==='image_reading'?{legible:true,question:'x^2-5x+6=0',clarification:''}:name==='review'?{consistent:true,issue:''}:{introduction:'حل معادله',steps:[],conclusion:'دو ریشه'};
+    const payload=name==='presentation'?{scene:null}:name==='image_reading'?{legible:true,question:'x^2-5x+6=0',clarification:''}:name==='review'?{consistent:true,issue:''}:{introduction:'حل معادله',steps:[],conclusion:'دو ریشه'};
     return {value:schema.parse(payload),inputTokens:30,outputTokens:10};
   }};
   const tutor=createTutor(model),state=await tutor.start('','beginner',image);
   expect(state.trace.slice(0,3)).toEqual(['entry','read_image','analyze_question']);
   expect(state.inputImage).toBeNull();expect(state.imageQuestion).toBe('x^2-5x+6=0');expect(state.tool?.values).toEqual([2,3]);
   expect(calls.filter(c=>c.imageUrl)).toEqual([{name:'image_reading',imageUrl:image.dataUrl}]);
-  const end=await tutor.resume(state,'understood');expect(end.modelCalls).toBe(3);expect(end.inputTokens).toBe(90);
+  const end=await tutor.resume(state,'understood');expect(end.modelCalls).toBe(4);expect(end.inputTokens).toBe(120);
 });
 it('asks for clarification on unreadable images instead of solving a guessed expression',async()=>{
   const model:ModelAdapter={async generate(schema){return {value:schema.parse({legible:false,question:'',clarification:'ضریب x خوانا نیست؛ آن را بنویسید.'}),inputTokens:40,outputTokens:10};}};

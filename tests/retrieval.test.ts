@@ -19,10 +19,10 @@ it.each([
   expect(refs.reduce((n,r)=>n+r.text.length,0)).toBeLessThanOrEqual(3600);
 });
 it('routes new math subjects into RAG instead of requesting unnecessary clarification',async()=>{
-  const state=await createTutor().start('نظریه گراف چیست؟');expect(state.trace).toContain('retrieve_context');expect(state.retrievalStatus).toBe('found');expect(state.trace).not.toContain('clarify_question');
+  const state=await createTutor().start('نظریه گراف چیست؟','beginner',undefined,undefined,true);expect(state.trace).toContain('retrieve_context');expect(state.retrievalStatus).toBe('found');expect(state.trace).not.toContain('clarify_question');
 });
 it('never solves differential equations as polynomial root questions',async()=>{
-  const state=await createTutor().start('معادله دیفرانسیل y\'=x^2 را حل کن');expect(state.analysis?.topic).toBe('general');expect(state.tool).toBeNull();expect(state.references.length).toBeGreaterThan(0);
+  const state=await createTutor().start('معادله دیفرانسیل y\'=x^2 را حل کن','beginner',undefined,undefined,true);expect(state.analysis?.topic).toBe('general');expect(state.tool).toBeNull();expect(state.references.length).toBeGreaterThan(0);
 });
 it('retrieves Persian questions reproducibly with provenance and bounded context',async()=>{
   const first=await retrieveReferences('انتگرال معین چه ارتباطی با مساحت دارد؟');

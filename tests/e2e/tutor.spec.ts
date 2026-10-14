@@ -2,7 +2,7 @@ import { test,expect } from '@playwright/test';
 test('closing the lesson returns to the empty composer without duplicating its answer',async({page})=>{
   const runId='11111111-1111-4111-8111-111111111111';
   const result={runId,question:'2x+4=0',level:'beginner',status:'awaiting_feedback',answer:{introduction:'پاسخ این درس',steps:[],conclusion:'x=-2'},visual:null,references:[],retrievalStatus:'empty',pending:'',verification:'passed',verificationNote:'بررسی مستقل',attempts:1,trace:['teach'],usage:{modelCalls:0,inputTokens:0,outputTokens:0},mode:'local'};
-  await page.route('**/api/tutor',async route=>{const request=route.request().postDataJSON();if(request.action==='resume')expect(request.event).toBe('skip');await route.fulfill({json:request.action==='start'?result:{...result,status:'completed',answer:null,visual:null,trace:['teach','close_lesson']}});});
+  await page.route('**/api/tutor',async route=>{const request=route.request().postDataJSON();if(request.action==='resume')expect(request.event).toBe('skip');const data=request.action==='start'?result:{...result,status:'completed',answer:null,visual:null,trace:['teach','close_lesson']};await route.fulfill({contentType:'text/event-stream',headers:{'x-vercel-ai-ui-message-stream':'v1'},body:[{type:'start',messageId:'answer'},{type:'data-result',data},{type:'finish'}].map(chunk=>`data: ${JSON.stringify(chunk)}\n\n`).join('')+'data: [DONE]\n\n'});});
   await page.goto('/');await page.getByRole('textbox',{name:'سؤال ریاضی'}).fill('2x+4=0');await page.getByRole('button',{name:'ارسال سؤال'}).click();await expect(page.locator('.answer')).toHaveCount(1);
   await page.getByRole('button',{name:'پایان درس',exact:true}).click();
   await expect(page.getByRole('heading',{name:'از سؤال شما شروع می‌کنیم.'})).toBeVisible();await expect(page.locator('.answer')).toHaveCount(0);
@@ -22,7 +22,7 @@ test('LearnIT branding, real math editor and photo controls work on mobile',asyn
   await page.getByRole('button',{name:'افزودن به سؤال'}).click();
   await expect(page.getByRole('textbox',{name:'سؤال ریاضی'})).toHaveValue('x^2-5x+6=0');
   await page.getByRole('button',{name:'ارسال سؤال'}).click();await expect(page.getByRole('button',{name:'فهمیدم',exact:true})).toBeVisible();
-  await page.getByRole('button',{name:'سؤال تازه',exact:true}).first().click();
+  await page.getByRole('button',{name:'چت جدید',exact:true}).first().click();
   const upload=page.locator('input[type=file]');
   await upload.setInputFiles({name:'bad.txt',mimeType:'text/plain',buffer:Buffer.from('bad')});await expect(page.getByRole('alert').filter({hasText:'عکس باید'})).toContainText('PNG');
   await upload.setInputFiles({name:'question.png',mimeType:'image/png',buffer:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/l9sAAAAASUVORK5CYII=','base64')});
@@ -34,9 +34,10 @@ test('LearnIT branding, real math editor and photo controls work on mobile',asyn
 test('unsupported operations never show verified roots or a chart',async({page})=>{
   await page.goto('/');
   for(const question of ['انتگرال x^2 را حساب کن','مشتق 2*3x']) {
+    await page.getByRole('button',{name:'چت جدید',exact:true}).first().click();
     await page.getByRole('textbox',{name:'سؤال ریاضی'}).fill(question);
     await page.getByRole('button',{name:'ارسال سؤال'}).click();
-    await expect(page.getByRole('button',{name:'شروع سؤال تازه'})).toBeVisible();
+    await expect(page.getByText('می‌توانید پیام بعدی را در همین گفتگو بنویسید.',{exact:true})).toBeVisible();
     await expect(page.getByText('نتوانستم جواب قابل اتکایی تأیید کنم.',{exact:false})).toBeVisible();
     await expect(page.getByRole('button',{name:'نمایش نمودار',exact:true})).toHaveCount(0);
     await expect(page.getByRole('button',{name:'بررسی با ابزار محاسبه'})).toHaveCount(0);
@@ -70,18 +71,20 @@ test('real lesson, feedback and token-free chart interaction',async({page})=>{
   await page.getByRole('button',{name:'دوباره توضیح بده'}).click();
   await expect(page.getByText('ادامه یادگیری',{exact:true})).toBeVisible();
   await page.getByRole('button',{name:'فهمیدم',exact:true}).click();
-  await expect(page.getByRole('button',{name:'شروع سؤال تازه'})).toBeVisible();
+  await expect(page.getByText('می‌توانید پیام بعدی را در همین گفتگو بنویسید.',{exact:true})).toBeVisible();
   expect(errors).toEqual([]);
 });
 test('concept, vector and mobile navigation',async({page})=>{
   await page.setViewportSize({width:390,height:844});await page.goto('/');
   await page.getByRole('button',{name:'باز کردن فهرست'}).click();
   await page.getByRole('button',{name:'گفت‌وگوها',exact:true}).click();
-  await expect(page.getByText('هنوز سؤالی نپرسیده‌اید.',{exact:false})).toBeVisible();
+  await expect(page.getByText('هنوز گفتگویی ندارید.',{exact:true})).toBeVisible();
+  await page.getByRole('button',{name:'چت جدید',exact:true}).last().click();
+  await page.getByRole('radio',{name:'استفاده از منابع اپ',exact:true}).click();
   await page.getByRole('textbox',{name:'سؤال ریاضی'}).fill('مشتق چیست؟');
   await page.getByRole('button',{name:'ارسال سؤال'}).click();
   await expect(page.getByText('تأیید مستقل نشده',{exact:true})).toBeVisible();
-  await page.getByRole('button',{name:'منابع بازیابی‌شده'}).click();
+  await page.getByRole('button',{name:/منابع بازیابی‌شده/}).click();
   await expect(page.locator('.source-reference').first()).toBeVisible();
   await page.getByRole('textbox',{name:'سؤال ریاضی'}).fill('جمع بردارهای (2,1) و (1,3)');
   await page.getByRole('button',{name:'ارسال سؤال'}).click();

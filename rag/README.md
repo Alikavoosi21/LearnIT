@@ -35,7 +35,7 @@ BM25 محلی با k1=1.2 و b=0.75؛ واژه‌های فارسی سؤال با
 ## بازسازی
 
 ```powershell
-cd 'E:/Codex File/Course/01/math-tutor'
+cd 'LearnIT'
 npm run rag:index
 ```
 

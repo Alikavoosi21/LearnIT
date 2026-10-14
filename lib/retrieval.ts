@@ -1,8 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { z } from 'zod';
-export const Reference=z.object({id:z.string(),sourceId:z.string(),title:z.string(),book:z.string(),url:z.string().url(),text:z.string(),license:z.string(),licenseUrl:z.string().url(),publisher:z.string(),score:z.number()});
-export type RetrievedReference=z.infer<typeof Reference>;
+import { Reference,type RetrievedReference } from './reference-contract';
+export { Reference,type RetrievedReference } from './reference-contract';
 type Chunk=Omit<RetrievedReference,'score'> & {keywords:string};
 const stop=new Set('the a an to of and or in is are for with at on as by this that from be it what how چیست چه یعنی را از به و در با یک این است کن بده توضیح چرا'.split(' '));
 const tokens=(s:string)=>s.toLowerCase().replace(/ي/g,'ی').replace(/ك/g,'ک').match(/[\p{L}\p{N}]+/gu)?.filter(x=>x.length>1&&!stop.has(x))??[];
